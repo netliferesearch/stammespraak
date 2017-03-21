@@ -20,6 +20,7 @@ class DetailPage extends React.Component {
   }
 
   render () {
+    console.log(this.props.data)
     if (this.props.data.loading) {
       return (<div>Loading</div>)
     }
@@ -27,35 +28,11 @@ class DetailPage extends React.Component {
     const {Post} = this.props.data
 
     return (
-      <Modal
-        isOpen
-        contentLabel='Create Post'
-        style={detailModalStyle}
-        onRequestClose={this.props.router.goBack}
-      >
-        <div className='close fixed right-0 top-0 pointer'>
-          <img src={require('../assets/close.svg')} alt=''/>
+      <div className='container'>
+            <h1>{this.props.data.entriy.word}</h1>
+            <p>{this.props.data.entriy.definition}</p>
+        <div className="cta"><small>Om du liker dette stammespråket <a href="https://www.netliferesearch.com/jobb">kan du kanskje jobbe hos oss</a>?</small></div>
         </div>
-        <div
-          className='delete ttu white pointer fw6 absolute left-0 top-0 br2'
-          onClick={this.handleDelete}
-        >
-          Delete
-        </div>
-        <div className='bg-white detail flex flex-column no-underline br2 h-100'>
-          <div
-            className='image'
-            style={{
-              backgroundImage: `url(${Post.imageUrl})`,
-              backgroundSize: 'cover',
-              paddingBottom: '100%',
-            }}
-          />
-          <div className='flex items-center black-80 fw3 description'>
-            {Post.description}
-          </div>
-        </div>
-      </Modal>
     )
   }
 

@@ -17,23 +17,21 @@ class ListPage extends Component {
   }
 
   render () {
-    if (!this.props.data.allDefinitions) {
+      
+    if (!this.props.data.allEntrieses) {
       return (<div className='flex w-100 h-100 items-center justify-center pt7'>
         <div>
           Loading
         </div>
       </div>)
     }
+    const entries = this.props.data.allEntrieses
+    const post = entries[Math.floor(Math.random() * entries.length)]
     return (<div>
-        <ul>
-        {this.props.data.allDefinitions.filter(entry => entry).map((entry, index) => (
             <Post
-              key={index}
-              entry={entry}
+              entry={post}
               refresh={() => this.props.data.refetch()}
             />
-        ))}
-        </ul>
         </div>)
     
   }
@@ -41,7 +39,7 @@ class ListPage extends Component {
 
 
 const FeedQuery = gql`query {
-  allDefinitions {
+  allEntrieses {
     id
     word
     defintion
