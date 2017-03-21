@@ -57,7 +57,7 @@ const ordliste = [
     },
     {
         word: 'ert i madrassen',
-        definition: 'en liten greie i et prosjekt som stadig plager interaksjonsdesigeneren'
+        definition: 'en liten greie i et prosjekt som stadig plager interaksjonsdesigneren'
     }
 ]
 const random = Math.floor(Math.random() * ordliste.length)
