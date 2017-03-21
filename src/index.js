@@ -13,18 +13,18 @@ const ordliste = [
     },
     {
         word: 'å spurve',
-        definition: 'verb, overført betyd.) ; forsiktig slippe en drittoppgave i hodet på noen andre, som ikke merker det før det er for sent.'
+        definition: '(verb, overført betyd.) ; forsiktig slippe en drittoppgave i hodet på noen andre, som ikke merker det før det er for sent.'
     },
     {
-        word: 'Ordlighet',
+        word: 'ordlighet',
         definition: 'At det føles som et begrep som betyr noe selv om du ikke nødvendigvis vet hva det betyr.'
     },
     {
-        word: 'Clever-dickness',
+        word: 'clever-dickness',
         definition: 'når noen prøver så hardt å være morsom eller flink at andre responderer med å rante.'
     },
     {
-        word: 'Hverdagsgenialitet',
+        word: 'hverdagsgenialitet',
         definition: 'Verdi, målsetning og fokus til Netlife Research Bergen.'
     },
     {
@@ -36,15 +36,15 @@ const ordliste = [
         definition: 'Kjell-Mortens ondsinnede bot. Konseptet Birdie oppsto en dag der TV-serien «Bør de gifte seg?» ble diskutert i lunsjen. Bør de ble til Birdie, og Kjell-Morten kodet opp boten med avansert AI som sikrer at du alltid får svar om at «Nei, det bør de ikke» hvis du håpet på et ja og vise-versa..'
     },
     {
-        word: 'Purreløk',
+        word: 'purreløk',
         definition: 'Når vi sender en purreløk til noen, sender vi en purring. Men purreløk er artigere.'
     },
     {
-        word: 'Knutset',
+        word: 'knutset',
         definition: 'Å bli fortalt at det du deler allerede er delt av Knut for lenge siden. Brukt i en setning: «Jeg droppet å dele det, i frykt for å bli knutset.»'
     },
     {
-        word: 'Rennesteinsfrukt',
+        word: 'rennesteinsfrukt',
         definition: 'Frukt som er så lavthengende at den ligger i rennesteinen.'
     },
     {
@@ -52,7 +52,7 @@ const ordliste = [
         definition: 'Oslo-kontoret foreslår noe som er gjort for lengst i vest.'
     },
     {
-        word: 'Dongelrygg',
+        word: 'dongelrygg',
         definition: 'Det du får etter å ha bært rundt på for mange dongler.'
     }
 ]
