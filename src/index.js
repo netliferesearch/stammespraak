@@ -21,7 +21,7 @@ const ordliste = [
     },
     {
         word: 'clever-dickness',
-        definition: 'Nnår noen prøver så hardt å være morsom eller flink at andre responderer med å rante.'
+        definition: 'Når noen prøver så hardt å være morsom eller flink at andre responderer med å rante.'
     },
     {
         word: 'hverdagsgenialitet',
