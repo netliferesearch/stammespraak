@@ -5,7 +5,7 @@ import './index.css'
 const ordliste = [
     {
         word: 'å hapse',
-        definition: '(omniverb): å utføre oppgaver som gagner bedriften, brukes som oftest i imperativ.'
+        definition: '(omniverb): Å utføre oppgaver som gagner bedriften, brukes som oftest i imperativ.'
     },
     {
         word: 'fryktfat',
@@ -13,7 +13,7 @@ const ordliste = [
     },
     {
         word: 'å spurve',
-        definition: '(verb, overført betyd.) ; forsiktig slippe en drittoppgave i hodet på noen andre, som ikke merker det før det er for sent.'
+        definition: '(verb, overført betyd.); forsiktig slippe en drittoppgave i hodet på noen andre, som ikke merker det før det er for sent.'
     },
     {
         word: 'ordlighet',
@@ -21,7 +21,7 @@ const ordliste = [
     },
     {
         word: 'clever-dickness',
-        definition: 'når noen prøver så hardt å være morsom eller flink at andre responderer med å rante.'
+        definition: 'Nnår noen prøver så hardt å være morsom eller flink at andre responderer med å rante.'
     },
     {
         word: 'hverdagsgenialitet',
@@ -49,7 +49,7 @@ const ordliste = [
     },
     {
         word: 'bergensning',
-        definition: 'Oslo-kontoret foreslår noe som er gjort for lengst i vest.'
+        definition: 'Når Oslo-kontoret foreslår noe som er gjort for lengst i vest.'
     },
     {
         word: 'dongelrygg',
