@@ -54,12 +54,16 @@ const ordliste = [
     {
         word: 'dongelrygg',
         definition: 'Det du får etter å ha bært rundt på for mange dongler.'
+    },
+    {
+        word: 'ert i madrassen',
+        definition: 'en liten greie i et prosjekt som stadig plager interaksjonsdesigeneren'
     }
 ]
-const random = Math.floor(Math.random()*ordliste.length)
+const random = Math.floor(Math.random() * ordliste.length)
 ReactDOM.render((
-    <div className='wrapper'>
-        <div className='container'>
+  <div className='wrapper'>
+   <div className='container'>
             <h1>{ordliste[random].word}</h1>
             <p>{ordliste[random].definition}</p>
         <div className="cta"><small>Om du liker dette stammespråket <a href="https://www.netliferesearch.com/jobb">kan du kanskje jobbe hos oss</a>?</small></div>
