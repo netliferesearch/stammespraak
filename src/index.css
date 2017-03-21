@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Amiri:400,700');
+
+body {  
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  font-family: Amiri;
+  height: 100%;
+  width: 100%;
+}
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.container {
+  width: 50%;
+  height: auto;
+  align-self: center;
+
+}
+h1 {
+  font-size: 5em;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.cta {
+  margin-top: 5em;
+  font-size: 13px;
+}
