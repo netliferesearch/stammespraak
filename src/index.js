@@ -9,13 +9,8 @@ import 'tachyons'
 // import App from './App'
 import './index.css'
 
-
 import ListPage from './components/ListPage'
 import DetailPage from './components/DetailPage'
-import CreatePage from './components/CreatePage'
-
-
-
 const networkInterface = createNetworkInterface({ uri: process.env.REACT_APP_GRAPHQL_ENDPOINT })
 
 const client = new ApolloClient({ networkInterface })
@@ -25,7 +20,6 @@ ReactDOM.render((
     <ApolloProvider client={client}>
       <Router history={browserHistory}>
         <Route path='/' component={ListPage} />
-        <Route path='create' component={CreatePage} />
         <Route path='/word/:id' component={DetailPage} />
       </Router>
     </ApolloProvider>
