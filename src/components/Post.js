@@ -1,7 +1,12 @@
 import React from 'react'
-import { graphql } from 'react-apollo'
-import gql from 'graphql-tag'
 import {Link} from 'react-router'
+import styled from 'styled-components'
+
+const container = styled.div`
+  height: auto;
+  align-self: center;
+  max-width: 200px;
+`
 
 export default class Post extends React.Component {
 
@@ -14,19 +19,19 @@ export default class Post extends React.Component {
   render () {
 
     return (
-        <div className="container">
+      <container>
       <Link
-        className='bg-white ma3 box post flex flex-column no-underline br2'
-        to={`/post/${this.props.entry.id}`}
+        className="no-underline"
+        to={`/word/${this.props.entry.id}`}
       >
         <h1>{this.props.entry.word}</h1>
         
       </Link>
       <p>{this.props.entry.definition}</p>
-      </div>
+      </container>
     )
   }
- }         //
+ }       
 
 
 

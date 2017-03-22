@@ -1,17 +1,7 @@
 import React from 'react'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
-import Modal from 'react-modal'
-import modalStyle from '../constants/modalStyle'
 import {withRouter} from 'react-router'
-
-const detailModalStyle = {
-  overlay: modalStyle.overlay,
-  content: {
-    ...modalStyle.content,
-    height: 761
-  }
-}
 
 class DetailPage extends React.Component {
 
@@ -20,17 +10,17 @@ class DetailPage extends React.Component {
   }
 
   render () {
-    console.log(this.props.data)
     if (this.props.data.loading) {
       return (<div>Loading</div>)
     }
 
-    const {Post} = this.props.data
-
+    const {Entries} = this.props.data
+    const { word, definition } = Entries
+    
     return (
       <div className='container'>
-            <h1>{this.props.data.entriy.word}</h1>
-            <p>{this.props.data.entriy.definition}</p>
+            <h1 class="no-underline">{word}</h1>
+            <p>{definition}</p>
         <div className="cta"><small>Om du liker dette stammespråket <a href="https://www.netliferesearch.com/jobb">kan du kanskje jobbe hos oss</a>?</small></div>
         </div>
     )
@@ -44,7 +34,6 @@ class DetailPage extends React.Component {
   }
 }
 
-
 const deleteMutation = gql`
   mutation deletePost($id: ID!) {
     deletePost(id: $id) {
@@ -54,10 +43,10 @@ const deleteMutation = gql`
 `
 
 const PostQuery = gql`query post($id: ID!) {
-  Post(id: $id) {
+  Entries(id: $id) {
     id
-    imageUrl
-    description
+    word
+    definition
   }
 }`
 
