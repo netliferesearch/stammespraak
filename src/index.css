@@ -14,21 +14,25 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1em;
 
 }
 .container {
-
+  max-width: 500px;
   height: auto;
   align-self: center;
   
 }
 h1 {
-  font-size: calc(104px + 7 * ((100vw - 500px) / 900));
+  font-size: calc(64px + 7 * ((100vw - 500px) / 900));
   margin: 0;
   padding: 0;
   line-height: 1;
-  
 }
+a.no-underline  {
+  text-decoration: none;
+}
+
 p {
   line-height: 1.2;
   max-width: 670px;
