@@ -13,7 +13,6 @@ export default class Post extends React.Component {
   static propTypes = {
     entry: React.PropTypes.object,
     mutate: React.PropTypes.func,
-    refresh: React.PropTypes.func,
   }
 
   render () {

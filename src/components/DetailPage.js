@@ -19,7 +19,7 @@ class DetailPage extends React.Component {
     
     return (
       <div className='container'>
-            <h1 class="no-underline">{word}</h1>
+            <h1 className="no-underline">{word}</h1>
             <p>{definition}</p>
         <div className="cta"><small>Om du liker dette stammespråket <a href="https://www.netliferesearch.com/jobb">kan du kanskje jobbe hos oss</a>?</small></div>
         </div>

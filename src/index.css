@@ -45,3 +45,7 @@ p {
 a {
   color: #000;
 }
+
+a {
+  cursor: pointer;
+}
