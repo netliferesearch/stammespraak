@@ -1,20 +1,14 @@
 import React, {Component} from 'react'
-import Post from './Post'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 
+import Post from './Post'
 import pointer from '../assets/pointer.svg'
 
 class ListPage extends Component {
 
   static propTypes = {
     data: React.PropTypes.object,
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (this.props.location.key !== nextProps.location.key) {
-      this.props.data.refetch()
-    }
   }
 
   render () {
@@ -37,7 +31,6 @@ class ListPage extends Component {
     
   }
 }
-
 
 const FeedQuery = gql`query {
   allEntrieses {

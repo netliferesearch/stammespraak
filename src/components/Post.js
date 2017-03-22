@@ -17,7 +17,6 @@ export default class Post extends React.Component {
   }
 
   render () {
-
     return (
       <container>
       <Link
@@ -25,7 +24,6 @@ export default class Post extends React.Component {
         to={`/word/${this.props.entry.id}`}
       >
         <h1>{this.props.entry.word}</h1>
-        
       </Link>
       <p>{this.props.entry.definition}</p>
       </container>
