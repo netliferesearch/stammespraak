@@ -1,8 +1,9 @@
 import React, {Component} from 'react'
-import { Link } from 'react-router'
 import Post from './Post'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
+
+import pointer from '../assets/pointer.svg'
 
 class ListPage extends Component {
 
@@ -17,63 +18,35 @@ class ListPage extends Component {
   }
 
   render () {
-    if (!this.props.data.allDefinitions) {
-      return (<div className='flex w-100 h-100 items-center justify-center pt7'>
-        <div>
+      
+    if (!this.props.data.allEntrieses) {
+      return (<div>
           Loading
-        </div>
       </div>)
     }
-    return (<div>
-        <ul>
-        {this.props.data.allDefinitions.filter(entry => entry).map((entry, index) => (
+    const entries = this.props.data.allEntrieses
+    const post = entries[Math.floor(Math.random() * entries.length)]
+    return (<div className="container">
             <Post
-              key={index}
-              entry={entry}
+              entry={post}
               refresh={() => this.props.data.refetch()}
             />
-        ))}
-        </ul>
-        </div>)
+            <img alt="Find a new random word" src={pointer} onClick={() => this.props.data.refetch()} />
+            <div className="cta"><small>Om du liker dette stammespråket <a href="https://www.netliferesearch.com/jobb">kan du kanskje jobbe hos oss</a>?</small></div>
+            </div>)
     
   }
 }
 
 
 const FeedQuery = gql`query {
-  allDefinitions {
+  allEntrieses {
     id
     word
-    defintion
+    definition
   }
 }`
 
 const ListPageWithData = graphql(FeedQuery)(ListPage)
 
 export default ListPageWithData
-
-/*
-let blurClass = ''
-
-    if (this.props.location.pathname !== '/') {
-      blurClass = ' blur'
-    }
-
-    return (
-      <div className={'w-100 flex justify-center pa6' + blurClass}>
-        <div className='w-100 flex flex-wrap' style={{maxWidth: 1150}}>
-          <Link to='/create' className='ma3 box new-post br2 flex flex-column items-center justify-center ttu fw6 f20 black-30 no-underline'>
-            <div>New Post</div>
-          </Link>
-          {this.props.data.allDefinitions.map((post) => (
-            <Post
-              key={post.id}
-              post={post}
-              refresh={() => this.props.data.refetch()}
-            />
-          ))}
-        </div>
-        {this.props.children}
-      </div>
-    )
-*/ 
