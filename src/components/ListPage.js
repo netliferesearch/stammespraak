@@ -5,6 +5,7 @@ import { randomItem } from '../utils';
 import Post from './Post';
 import Footer from './Footer';
 import Nav from './Nav'
+import Container from '../primitives/Container'
 
 export default class ListPage extends Component {
   constructor(props) {
@@ -30,15 +31,21 @@ export default class ListPage extends Component {
     const { post } = this.state;
 
     return (
-      <div className="container">
+      <Container>
         <Helmet>
           <title>Stammespråk – av Netlife</title>
           <link rel='canonical' href='https://www.stammespråk.no/' />
+          <meta property="og:type" content="article" />
+          <meta property="og:title" content="Tilfeldige ord"/>
+          <meta property="og:site_name" content="Stammespråk – av Netlife"/>
+          <meta property="og:url" content="https://www.stammespråk.no"/>
+          <meta property="og:image" content="https://www.stammespråk.no/pointer.jpg"/>
+          <meta property="article:author" content="Netlife Research"/>
         </Helmet>
         <Post entry={post} />
         <div onClick={this.handleRandomClick}><Nav  /></div>
         <Footer />
-      </div>
+      </Container>
     );
   }
 }
