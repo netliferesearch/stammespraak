@@ -3,8 +3,7 @@ import { randomItem } from '../utils';
 
 import Post from './Post';
 import Footer from './Footer';
-
-import pointer from '../assets/pointer.svg';
+import Nav from './Nav'
 
 export default class ListPage extends Component {
   constructor(props) {
@@ -32,9 +31,7 @@ export default class ListPage extends Component {
     return (
       <div className="container">
         <Post entry={post} />
-        <a onClick={this.handleRandomClick}>
-          <img alt="Find a new random word" src={pointer} />
-        </a>
+        <div onClick={this.handleRandomClick}><Nav  /></div>
         <Footer />
       </div>
     );

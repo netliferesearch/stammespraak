@@ -1,22 +1,21 @@
 import React from 'react'
 import {Link} from 'react-router'
 
-import Container from '../primitives/Container';
+import Container from '../primitives/Container'
 
 const Post = (props) => {
   const {
     entry: {
-      id: entryId = '',
       word: entryWord = '',
-      definition: entryDefinition = '',
-    } = {},
-  } = props;
+      definition: entryDefinition = ''
+    } = {}
+  } = props
 
   return (
     <Container>
       <Link
-        className="no-underline"
-        to={`/ord/${entryId}`}
+        className='no-underline'
+        to={`/${entryWord}`}
       >
         <h1>{entryWord}</h1>
       </Link>
@@ -26,7 +25,7 @@ const Post = (props) => {
 }
 
 Post.propTypes = {
- entry: React.PropTypes.object,
+  entry: React.PropTypes.object
 }
 
-export default Post;
+export default Post
