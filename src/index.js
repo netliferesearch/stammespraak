@@ -22,7 +22,7 @@ ReactDOM.render((
       <Router history={browserHistory}>
         <Route path='/' component={InitialLoad}>
           <IndexRoute component={ListPage} />
-          <Route path='/ord/:id' component={DetailPage} />
+          <Route path='/:word' component={DetailPage} />
         </Route>
       </Router>
     </ApolloProvider>
