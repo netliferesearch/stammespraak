@@ -10,12 +10,18 @@ const Post = (props) => {
       definition: entryDefinition = ''
     } = {}
   } = props
-
+  const title = `Stammespråk: ${entryWord} – av Netlife`
   return (
     <Container>
       <Helmet>
-        <title>{`Stammespråk: ${entryWord} – av Netlife`}</title>
+        <title>{title}</title>
         <link rel='canonical' href={`https://www.stammespråk.no/${encodeURI(entryWord)}`} />
+        <meta property='og:type' content='article' />
+        <meta property='og:title' content={title} />
+        <meta property='og:site_name' content='Stammespråk – av Netlife' />
+        <meta property='og:url' content='https://www.stammespråk.no' />
+        <meta property='og:image' content='https://www.stammespråk.no/pointer.jpg' />
+        <meta property='article:author' content='Netlife Research' />
       </Helmet>
       <Link
         className='no-underline'
