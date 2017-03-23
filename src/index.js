@@ -12,7 +12,7 @@ import './index.css'
 import ListPage from './components/ListPage'
 import DetailPage from './components/DetailPage'
 const networkInterface = createNetworkInterface({ uri: process.env.REACT_APP_GRAPHQL_ENDPOINT })
-import InitialLoad from './containers/InitialLoad';
+import InitialLoad from './containers/InitialLoad'
 
 const client = new ApolloClient({ networkInterface })
 
@@ -20,7 +20,7 @@ ReactDOM.render((
   <div className='wrapper'>
     <ApolloProvider client={client}>
       <Router history={browserHistory}>
-        <Route path="/" component={InitialLoad}>
+        <Route path='/' component={InitialLoad}>
           <IndexRoute component={ListPage} />
           <Route path='/ord/:id' component={DetailPage} />
         </Route>
