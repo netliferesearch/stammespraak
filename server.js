@@ -2,6 +2,14 @@ const express = require('express');
 const history = require('connect-history-api-fallback');
 const port = process.env.PORT || 3000;
 const app = express();
+
+app.set('forceSSLOptions', {
+  enable301Redirects: true,
+  trustXFPHeader: false,
+  httpsPort: 443,
+  sslRequiredMessage: 'SSL Required.'
+});
+
 app.use(history());
 app.use(express.static(`${__dirname}/build`));
 app.listen(port, () => {
