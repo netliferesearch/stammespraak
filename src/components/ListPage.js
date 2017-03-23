@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { Helmet } from 'react-helmet'
 import { randomItem } from '../utils';
 
 import Post from './Post';
@@ -30,6 +31,10 @@ export default class ListPage extends Component {
 
     return (
       <div className="container">
+        <Helmet>
+          <title>Stammespråk – av Netlife</title>
+          <link rel='canonical' href='https://www.stammespråk.no/' />
+        </Helmet>
         <Post entry={post} />
         <div onClick={this.handleRandomClick}><Nav  /></div>
         <Footer />
