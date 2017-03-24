@@ -43,3 +43,9 @@ a {
 a {
   cursor: pointer;
 }
+
+@media screen and (max-width:520px) {
+    h1 {
+        font-size: 11vw;
+    }
+}
