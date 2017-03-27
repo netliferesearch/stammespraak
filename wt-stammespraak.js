@@ -4,7 +4,7 @@ module.exports = (context, cb) => {
   const text = context.body.text.split(';')
   const definition = text[1]
   const word = text[0]
-  const token = 'Bearer ${context.secret.token}'
+  const token = `Bearer ${context.secrets.token}`
   const query = `mutation {
     createEntries(definition: "${definition}" word: "${word}") {
       id
