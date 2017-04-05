@@ -5,6 +5,7 @@ module.exports = (context, cb) => {
   const definition = text[1]
   const word = text[0]
   const token = `Bearer ${context.secrets.token}`
+
   const query = `mutation {
     createEntries(definition: "${definition}" word: "${word}") {
       id
