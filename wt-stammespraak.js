@@ -27,6 +27,9 @@ module.exports = (context, cb) => {
   })
   .then((data) => {
     console.log(data)
-    cb(null, data)
+    cb(null, `La til ordet *${word}* med definsjonen «${definition}» på <https://www.stammesprak.no/${encodeURI(word)}|www.stammesprak.no> :tada:`)
+  }).catch(error => {
+    console.log(error)
+    cb(null, `Noko gjekk gale ${error}`)
   })
 }
