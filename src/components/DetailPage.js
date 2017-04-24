@@ -1,10 +1,11 @@
 import React, {PropTypes} from 'react'
-import { Link } from 'react-router'
+import { Link, browserHistory } from 'react-router'
 import { Helmet } from 'react-helmet'
 
 import { capitalize } from '../utils'
 import Footer from './Footer'
 import Container from '../primitives/Container'
+import A from '../primitives/A'
 
 const DetailPage = (props) => {
   const {
@@ -32,7 +33,7 @@ const DetailPage = (props) => {
       <h1 className='no-underline'>{word}</h1>
       <p>{definition}</p>
       {user && <p><small>Innført av {capitalize(user)}</small></p>}
-      <Link to='/'>Tilbake</Link>
+      <A onClick={browserHistory.goBack}>Tilbake</A>
       <Footer />
     </Container>
   )
