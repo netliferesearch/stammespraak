@@ -1,34 +1,21 @@
 import React, { Component, PropTypes } from 'react';
+import { Link } from 'react-router'
 import { Helmet } from 'react-helmet'
-import { randomItem } from '../utils';
+import shortid from 'shortid'
 
-import Post from './Post';
 import Footer from './Footer';
-import Nav from './Nav'
 import Container from '../primitives/Container'
+import BareList from '../primitives/BareList'
 
 export default class ListPage extends Component {
-  constructor(props) {
-    super(props);
-    const { posts } = this.props;
-    this.state = { post: randomItem(posts)};
-    this.handleRandomClick = this.handleRandomClick.bind(this);
-  }
 
   static propTypes = {
     post: PropTypes.object,
   }
 
-  handleRandomClick() {
-    const { posts } = this.props;
-
-    this.setState({
-      post: randomItem(posts),
-    });
-  }
 
   render() {
-    const { post } = this.state;
+    const { posts } = this.props;
 
     return (
       <Container>
@@ -42,8 +29,14 @@ export default class ListPage extends Component {
           <meta property="og:image" content="https://www.stammespråk.no/pointer.jpg"/>
           <meta property="article:author" content="Netlife Research"/>
         </Helmet>
-        <Post entry={post} />
-        <div onClick={this.handleRandomClick}><Nav  /></div>
+        <h1>Stammespråk</h1>
+        <BareList>
+          {
+            posts.map(list => (
+              <li key={shortid.generate()}><Link to={list.word}>{list.word}</Link></li>
+            ))
+          }
+        </BareList>
         <Footer />
       </Container>
     );

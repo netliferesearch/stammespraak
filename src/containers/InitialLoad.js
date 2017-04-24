@@ -22,10 +22,11 @@ class InitialLoad extends PureComponent {
 }
 
 const FeedQuery = gql`query {
-  allEntrieses {
+  allEntrieses(orderBy:word_ASC) {
     id
     word
     definition
+    user
   }
 }`
 

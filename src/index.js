@@ -22,6 +22,7 @@ ReactDOM.render((
       <Router history={browserHistory}>
         <Route path='/' component={InitialLoad}>
           <IndexRoute component={ListPage} />
+          <Route path='/alle' component={ListPage} />
           <Route path='/:word' component={DetailPage} />
         </Route>
       </Router>
