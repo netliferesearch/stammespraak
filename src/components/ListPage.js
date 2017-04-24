@@ -29,7 +29,7 @@ export default class ListPage extends Component {
           <meta property="og:image" content="https://www.stammespråk.no/pointer.jpg"/>
           <meta property="article:author" content="Netlife Research"/>
         </Helmet>
-        <h1>Stammespråk</h1>
+        <Link to="/"><h1>Stammespråk</h1></Link>
         <BareList>
           {
             posts.map(list => (
