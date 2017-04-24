@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react'
-import { Link, browserHistory } from 'react-router'
+import { browserHistory } from 'react-router'
 import { Helmet } from 'react-helmet'
 
 import { capitalize } from '../utils'
@@ -30,6 +30,8 @@ const DetailPage = (props) => {
         <meta property='og:image' content='https://www.stammesprak.no/pointer.jpg' />
         <meta property='article:author' content='Netlife Research' />
       </Helmet>
+
+
       <h1 className='no-underline'>{word}</h1>
       <p>{definition}</p>
       {user && <p><small>Innført av {capitalize(user)}</small></p>}
