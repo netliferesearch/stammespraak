@@ -11,6 +11,7 @@ import './index.css'
 
 import ListPage from './components/ListPage'
 import DetailPage from './components/DetailPage'
+import RandomPage from './components/RandomPage'
 const networkInterface = createNetworkInterface({ uri: process.env.REACT_APP_GRAPHQL_ENDPOINT })
 import InitialLoad from './containers/InitialLoad'
 
@@ -21,7 +22,7 @@ ReactDOM.render((
     <ApolloProvider client={client}>
       <Router history={browserHistory}>
         <Route path='/' component={InitialLoad}>
-          <IndexRoute component={ListPage} />
+          <IndexRoute component={RandomPage} />
           <Route path='/alle' component={ListPage} />
           <Route path='/:word' component={DetailPage} />
         </Route>
