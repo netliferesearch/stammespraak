@@ -19,3 +19,5 @@ Enable the Slack Outgoing Webhook
 * `wt create wt-stammespraak wt-stammespraak.js`
 * Use the wt-URL in a Slack outgoing webhook
 * The slash command is set to take `word;definition`
+
+
