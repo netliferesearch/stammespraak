@@ -3,6 +3,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
+## Sanity-backend
+Get access to the sanity version by logging onto the
+driftfelles@netlife.com going to manage.sanity.io and adding yourself as
+a user ( assuming this wont go over the free plan. If so, remove someone
+other than driftfelles@netlife.com and proceed ). 
+
 ## TL;DR
 
 Get the website up and running
